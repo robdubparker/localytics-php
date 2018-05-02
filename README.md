@@ -3,6 +3,7 @@ Localytics PHP SDK
 
 # Example use:
 
+```
 // Wrapper object that will contain our messages.
 $messages = new \Frequency\Localytics\Push\Message\LocalyticsMessages();
 
@@ -49,4 +50,4 @@ $push = new \Frequency\Localytics\Push\LocalyticsPushNotification($account, $mes
 
 // Send Push Notification.
 $response = $push->pushMessages();
-
+```
