@@ -1,0 +1,23 @@
+{
+    "name": "plinthify/localyticsphp",
+    "type": "library",
+    "authors": [
+        {
+            "name": "robparker",
+            "email": "rparker@plinthify.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Plinthify\\Localytics\\API": "src/",
+            "Plinthify\\Localytics\\Push": "src/Push",
+            "Plinthify\\Localytics\\Push\\Target": "src/Push/Targets",
+            "Plinthify\\Localytics\\Push\\Message": "src/Push/Message",
+            "Plinthify\\Localytics\\Exports": "src/Exports"
+        }
+    }
+}
