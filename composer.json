@@ -13,11 +13,11 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "Plinthify\\Localytics\\API": "src/",
-            "Plinthify\\Localytics\\Push": "src/Push",
-            "Plinthify\\Localytics\\Push\\Target": "src/Push/Targets",
-            "Plinthify\\Localytics\\Push\\Message": "src/Push/Message",
-            "Plinthify\\Localytics\\Exports": "src/Exports"
+            "Plinthify\\Localytics\\API\\": "src/",
+            "Plinthify\\Localytics\\Push\\": "src/Push",
+            "Plinthify\\Localytics\\Push\\Target\\": "src/Push/Targets",
+            "Plinthify\\Localytics\\Push\\Message\\": "src/Push/Message",
+            "Plinthify\\Localytics\\Exports\\": "src/Exports"
         }
     }
 }
