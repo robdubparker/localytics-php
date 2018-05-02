@@ -22,6 +22,7 @@ $ios->setLlAttachmentUrl('https://example.com/attachment.jpg');
 $ios->setLlDeepLinkUrl('https://someurl.com/deeplink');
 
 // Build Target object for message.
+// @params target_type, target_value
 $target_obj = new \Frequency\Localytics\Push\Target\TargetObject('audience_id', '1234');
 
 // Build message object.
