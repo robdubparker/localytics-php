@@ -13,8 +13,7 @@ class LocalyticsMessage extends LocalyticsMessages {
 
   public function __construct() {
     parent::__construct();
-    $this->alert = '';
-    $this->target = '';
+    $this->alert = new Alert();
   }
 
   function getAlert() {
