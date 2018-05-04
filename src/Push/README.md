@@ -23,7 +23,7 @@ $ios->setLlDeepLinkUrl('https://someurl.com/deeplink');
 $target_obj = new \Plinthify\Localytics\Push\Target\TargetObject('audience_id', '1234');
 
 // Build message object.
-$message = new \Frequency\Localytics\Push\Message\LocalyticsMessage();
+$message = new \Plinthify\Localytics\Push\Message\LocalyticsMessage();
 // set the message alert object.
 $message->setAlert($alert);
 // set the message target object
