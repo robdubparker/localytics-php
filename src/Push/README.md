@@ -2,17 +2,17 @@
 
 ```
 // Wrapper object that will contain our messages.
-$messages = new \Frequency\Localytics\Push\Message\LocalyticsMessages();
+$messages = new \Plinthify\Localytics\Push\Message\LocalyticsMessages();
 
 // Build Alert object data for message.
-$alert = new \Frequency\Localytics\Push\Message\Alert();
+$alert = new \Plinthify\Localytics\Push\Message\Alert();
 // This field is required.
 $alert->setBody('My body message');
 $alert->setTitle('Here is my message title');
 $alert->setSubtitle('Here is my message subtitle');
 
 // We'll send to ios devices for this example.
-$ios = new \Frequency\Localytics\Push\Message\IosMessage();
+$ios = new \Plinthify\Localytics\Push\Message\IosMessage();
 $ios->setCategory('myCategory');
 $ios->setBadge(1);
 $ios->setLlAttachmentUrl('https://example.com/attachment.jpg');
@@ -20,7 +20,7 @@ $ios->setLlDeepLinkUrl('https://someurl.com/deeplink');
 
 // Build Target object for message.
 // @params target_type, target_value
-$target_obj = new \Frequency\Localytics\Push\Target\TargetObject('audience_id', '1234');
+$target_obj = new \Plinthify\Localytics\Push\Target\TargetObject('audience_id', '1234');
 
 // Build message object.
 $message = new \Frequency\Localytics\Push\Message\LocalyticsMessage();
@@ -36,7 +36,7 @@ $message->setIos($device_obj);
 $messages->addMessage($message);
 
 // Build our account object.
-$account = new \Frequency\Localytics\API\LocalyticsAccountBase($api_key, $api_secret);
+$account = new \Plinthify\Localytics\API\LocalyticsAccountBase($api_key, $api_secret);
 $app_id = 'some-app-id-12345';
 // (Optional)
 $request_id = 'some-unique-messageidentifier';
@@ -44,7 +44,7 @@ $request_id = 'some-unique-messageidentifier';
 $campaign_key = 'campaign_name';
 
 // Build our Push Message object.
-$push = new \Frequency\Localytics\Push\LocalyticsPushNotification($account, $messages, $target_obj->getType(), $app_id, $request_id, $campaign_key);
+$push = new \Plinthify\Localytics\Push\LocalyticsPushNotification($account, $messages, $target_obj->getType(), $app_id, $request_id, $campaign_key);
 
 // Send Push Notification.
 $response = $push->pushMessages();
